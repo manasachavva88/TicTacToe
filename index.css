@@ -1,0 +1,187 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow-x: hidden;
+  padding: 30px;
+}
+.mainbody {
+  background: #6952c7;
+  border-radius: 20px;
+  padding: 30px;
+}
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 2px;
+  margin: 20px auto;
+  color: black;
+  font-weight: bold;
+  font-size: small;
+  background: black;
+}
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.cell:hover {
+  background-color: #ddd;
+}
+.cell.win {
+  background-color: #6bff6b;
+}
+
+.win {
+  background-color: #6bff6b;
+  color: white;
+  font-weight: bold;
+}
+
+.textcolor {
+  color: white;
+}
+.subdiv {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 600px;
+  box-shadow: 0 0 4px;
+  border-radius: 20px;
+  padding: 20px;
+  background: #d841c1;
+  color: white;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+.maincontent {
+  font-weight: bold;
+  font-size: larger;
+  font-family: math;
+}
+.subcontent {
+  font-weight: bold;
+  font-size: x-large;
+  font-family: fangsong;
+}
+.startbutton {
+  background: #433bb6;
+  padding: 10px 30px 10px 30px;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  display: inline-block;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.startbutton:hover {
+  background-color: #2980b9; /* Hovered button background color */
+  transform: scale(1.05); /* Scale up slightly on hover */
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+#subdiv2 {
+  display: none;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #e912fb;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.playdiv1 {
+  box-shadow: 0 0 4px;
+  padding: 50px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  width: 500px;
+}
+.contentstyle {
+  font-weight: bold;
+  font-size: larger;
+  font-family: system-ui;
+}
+#playername {
+  font-size: large;
+  font-weight: bold;
+  font-family: system-ui;
+}
+#playfrndmsg {
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: larger;
+}
+#playerwinmsg {
+  font-size: large;
+  font-weight: bold;
+  font-family: system-ui;
+  margin: 20px;
+}
+.mainboard {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+.playercards1,
+.playercards2 {
+  display: flex;
+  box-shadow: 0 0 4px;
+  padding: 30px 50px;
+  border-radius: 30px;
+  flex-direction: column;
+  gap: 10px;
+  font-size: large;
+  color: blue;
+  font-weight: bold;
+  border: 2px solid;
+}
+.playercardsactive {
+  background-color: #7acddc;
+  border: 2px solid red;
+}
+.playerinactive {
+  background: none;
+  box-shadow: 0 0 4px;
+  border: 2px solid;
+}
+@media (max-width: 768px) {
+  .subdiv {
+    width: auto;
+  }
+  .buttons {
+    flex-direction: column;
+  }
+  .playdiv1 {
+    width: auto;
+  }
+  .mainboard {
+    flex-direction: column;
+  }
+}

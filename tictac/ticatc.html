@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body class="sizing">
+    <header>
+        <h1>TicTac Toe</h1>
+        <h4 id="playfrndmsg"></h4>
+        <h4 id="playmsg">
+            </div>
+            <h5 id="playername"></h5>
+    </header>
+    <main>
+        <div id="playWithFriend">
+            <div class="playdiv1">
+                <p class="contentstyle">Great choice! Let's play Tic-Tac-Toe. Before we begin, may I know the names of
+                    both players, please?
+                </p>
+                <p>Player 1 : <input type="text" id="player1Name"></p>
+                <p>Player 2 : <input type="text" id="player2Name"></p>
+                <button onclick="friendsgame()" class="startbutton">Start Game</button>
+            </div>
+        </div>
+        <div id="playWithComputer">
+            <div class="playdiv1">
+                <p class="contentstyle">Great choice! You've selected to play against the computer. Before we begin, may
+                    I know the name of
+                    you, please?
+                </p>
+                <p>Player 1 : <input type="text" id="computerName"></p>
+                <button onclick="computergame()" class="startbutton">Start Game</button>
+            </div>
+        </div>
+        <div class="mainboard" id="mainboard">
+            <div class="playercards1" id="playercards1">
+                <div>Player1</div>
+                <div id="player1UserName"></div>
+                <div>X</div>
+            </div>
+            <div id="board" class="board">
+                <div class="cell" onclick="cellClick(0,0)"></div>
+                <div class="cell" onclick="cellClick(0,1)"></div>
+                <div class="cell" onclick="cellClick(0,2)"></div>
+                <div class="cell" onclick="cellClick(1,0)"></div>
+                <div class="cell" onclick="cellClick(1,1)"></div>
+                <div class="cell" onclick="cellClick(1,2)"></div>
+                <div class="cell" onclick="cellClick(2,0)"></div>
+                <div class="cell" onclick="cellClick(2,1)"></div>
+                <div class="cell" onclick="cellClick(2,2)"></div>
+            </div>
+            <div class="playercards2" id="playercards2">
+                <div>Player2</div>
+                <div id="player2UserName"></div>
+                <div>O</div>
+            </div>
+        </div>
+
+        <!-- <div id="board" class="board">
+            <div class="cell" onclick="cellClick(0,0)"></div>
+            <div class="cell" onclick="cellClick(0,1)"></div>
+            <div class="cell" onclick="cellClick(0,2)"></div>
+            <div class="cell" onclick="cellClick(1,0)"></div>
+            <div class="cell" onclick="cellClick(1,1)"></div>
+            <div class="cell" onclick="cellClick(1,2)"></div>
+            <div class="cell" onclick="cellClick(2,0)"></div>
+            <div class="cell" onclick="cellClick(2,1)"></div>
+            <div class="cell" onclick="cellClick(2,2)"></div>
+        </div> -->
+        <div id="playerwinmsg"></div>
+        <div id="resetbutton">
+            <a onclick="resetgame()" class="startbutton">Reset Game</a>
+            <a href="../index.html" class="startbutton">Back to Home</a>
+        </div>
+
+    </main>
+
+    <script src="tictac.js"></script>
+</body>
+
+</html>
